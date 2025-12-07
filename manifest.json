@@ -1,21 +1,20 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "User Agent UnNightlyfier",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Changes the version number in the user agent of Nightly (and Beta) versions of Firefox to match the release version of Firefox, which allows using those versions without making your fingerprint (much) more unique.",
     "developer": {
         "name": "Joaquim Monteiro",
         "url": "https://github.com/MonterraByte/user-agent-unnightlyfier"
     },
     "permissions": [
+        "<all_urls>",
         "storage",
         "webRequest",
         "webRequestBlocking"
     ],
-    "host_permissions": [
-        "<all_urls>"
-    ],
     "background": {
+        "persistent": true,
         "scripts": [
             "background.js"
         ]
